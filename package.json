@@ -1,0 +1,33 @@
+{
+  "name": "sentry-adonis-v6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "devDependencies": {
+    "@adonisjs/core": "^6.9.0",
+    "@adonisjs/tsconfig": "^1.3.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@sentry/node": "^7.114.0"
+  }
+}

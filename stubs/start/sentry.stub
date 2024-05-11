@@ -1,0 +1,22 @@
+{{{
+  exports({ to: app.configPath('sentry.ts') })
+}}}
+
+import env from '#start/env'
+import Sentry from 'sentry/services/main'
+
+/*
+|--------------------------------------------------------------------------
+| Sentry config
+|--------------------------------------------------------------------------
+|
+| For more information about the Sentry config visite 
+| https://docs.sentry.io/platforms/javascript/guides/node/configuration/options
+|
+*/
+const sentryConfig = defineConfig({
+    dsn: env.get('SENTRY_DSN'),
+    environment: env.get('SENTRY_ENVIRONMENT')
+    tracesSampleRate: 0.0
+    integrations: [Sentry.debugIntegration()],
+})
