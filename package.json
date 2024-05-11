@@ -1,15 +1,41 @@
 {
   "name": "sentry-adonis-v6",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sentry provider for adonisjs v6 framework",
+  "main": "build/index.js",
+  "engines": {
+    "node": ">=21.0.0"
+  },
   "type": "module",
+  "files": [
+    "build"
+  ],
+  "exports": {
+    ".": "./build/index.js",
+    "./types": "./build/src/types.js",
+    "./commands": "./build/commands/main.js",
+    "./services/main": "./build/services/main.js",
+    "./sentry_provider": "./build/providers/sentry_provider.js"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mvargaslandolfi1993/sentry-adonis-v6#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvargaslandolfi1993/sentry-adonis-v6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvargaslandolfi1993/sentry-adonis-v6/issues"
+  },
+  "keywords": [
+    "adonis",
+    "sentry"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "npm run copyfiles && tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Miguel Vargas",
   "prettier": {
     "trailingComma": "es5",
     "semi": false,
