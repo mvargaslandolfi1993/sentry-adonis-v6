@@ -1,5 +1,4 @@
 import { BaseCommand } from '@adonisjs/core/ace'
-import Sentry from '../services/main.js'
 
 export default class SentryTest extends BaseCommand {
   static commandName = 'sentry:test'
@@ -9,6 +8,8 @@ export default class SentryTest extends BaseCommand {
    * Execute command
    */
   async run(): Promise<void> {
+    const Sentry = await this.app.container.make("sentry")
+
     try {
       throw new Error('This is a test exception sent from the Sentry Adonis.')
     } catch (error) {

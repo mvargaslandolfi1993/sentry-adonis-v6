@@ -11,3 +11,4 @@ test/__app
 dist
 .env
 tmp
+build
