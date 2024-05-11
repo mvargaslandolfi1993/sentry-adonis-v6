@@ -1,10 +1,6 @@
 # Sentry-Adonis-v6
 
-> Sentry SDK for AdonisJS v6
-
-[![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url]
-
-Sentry service provider for Adonis v6
+> Sentry service provider for Adonis v6
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -55,12 +51,3 @@ import Sentry from 'sentry-adonis-v6/services/main'
   ```
 
 For additional details of Sentry API, please check the Sentry SDK documentation by this link [Sentry docs](https://docs.sentry.io/platforms/node/?platform=node)
-
-[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
-[typescript-url]: "typescript"
-
-![NPM Version](https://img.shields.io/npm/v/https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fsentry-adonis-v6)
-[npm-url]: https://www.npmjs.com/package/sentry-adonis-v6 "npm"
-
-![NPM License](https://img.shields.io/npm/l/https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fsentry-adonis-v6)
-[license-url]: LICENSE.md "license"
