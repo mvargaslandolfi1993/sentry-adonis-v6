@@ -3,7 +3,7 @@
 }}}
 
 import env from '#start/env'
-import Sentry from 'sentry/services/main'
+import Sentry from 'sentry-adonis-v6/services/main'
 
 /*
 |--------------------------------------------------------------------------
