@@ -1,11 +1,11 @@
 import type { ApplicationService } from '@adonisjs/core/types'
 import { RuntimeException } from '@poppinss/utils'
-import { Sentry } from '../src/sentry.js'
-import { SentryConfig } from '../src/types.js'
+import { SentryConfig, SentryService } from '../src/types.js'
+import { SentryManager } from '../src/sentry_manager.js'
 
 declare module '@adonisjs/core/types' {
   export interface ContainerBindings {
-    sentry: typeof Sentry
+    'sentry': SentryService
   }
 }
 
@@ -24,11 +24,11 @@ export default class SentryProvider {
         )
       }
 
-      Sentry.init({
+      return SentryManager.init({
         ...config,
       })
-
-      return { ...Sentry }
     })
+
+    this.app.container.make('sentry')
   }
 }

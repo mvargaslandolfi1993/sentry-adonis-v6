@@ -26,16 +26,16 @@ node ace configure sentry-adonis-v6
 
 # Sample Usage
 
-After configure Sentry service will be initialized. After this you can import Sentry service anywhere in your application in such way:
+After configure Sentry service will be initialized. After this you can import Sentry service anywhere in your application as follows:
 
 ```js
-import Sentry from 'sentry-adonis-v6/services/main'
+import { Sentry } from 'sentry-adonis-v6'
 ```
 
-- Then you have to send your error details to Sentry. You can use Adonis Exception Handler for this purposes. For example you can implement such Exception Handler:
+- Then you have to send your error details to Sentry. You can use Adonis Exception Handler for this purposes. For example you can implement and Exception Handler:
 
   ```js
-    import Sentry from 'sentry-adonis-v6/services/main'
+    import { Sentry } from 'sentry-adonis-v6'
     import { HttpContext, ExceptionHandler } from '@adonisjs/core/http'
 
     export default class ExceptionHandler extends ExceptionHandler {
@@ -49,5 +49,11 @@ import Sentry from 'sentry-adonis-v6/services/main'
         }
     }
   ```
+
+Additionally, you can run a command to validate and test the connection to Sentry as follows:
+
+```bash
+node ace sentry:test
+```
 
 For additional details of Sentry API, please check the Sentry SDK documentation by this link [Sentry docs](https://docs.sentry.io/platforms/node/?platform=node)

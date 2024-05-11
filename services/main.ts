@@ -1,7 +1,7 @@
 import app from '@adonisjs/core/services/app'
-import { Sentry } from '../src/sentry.js'
+import { SentryService } from '../src/types.js'
 
-let sentry: typeof Sentry
+let sentry: SentryService
 
 await app.booted(async () => {
   sentry = await app.container.make('sentry')

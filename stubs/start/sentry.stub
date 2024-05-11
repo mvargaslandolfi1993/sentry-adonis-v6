@@ -3,7 +3,8 @@
 }}}
 
 import env from '#start/env'
-import Sentry from 'sentry-adonis-v6/services/main'
+import { Sentry } from 'sentry-adonis-v6'
+import { defineConfig } from 'sentry-adonis-v6'
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,9 @@ import Sentry from 'sentry-adonis-v6/services/main'
 |
 */
 const sentryConfig = defineConfig({
-    dsn: env.get('SENTRY_DSN'),
-    environment: env.get('SENTRY_ENVIRONMENT')
-    tracesSampleRate: 0.0
-    integrations: [Sentry.debugIntegration()],
+  dsn: env.get('SENTRY_DSN'),
+  environment: env.get('SENTRY_ENVIRONMENT'),
+  tracesSampleRate: 0.0,
 })
+
+export default sentryConfig
