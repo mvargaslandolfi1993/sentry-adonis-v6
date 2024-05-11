@@ -10,7 +10,7 @@ export async function configure(command: ConfigureCommand) {
   /**
    * Publish config file
    */
-  await codemods.makeUsingStub(stubsRoot, 'config/sentry.stub', {})
+  await codemods.makeUsingStub(stubsRoot, 'start/sentry.stub', {})
 
   /**
    * Publish provider and command
